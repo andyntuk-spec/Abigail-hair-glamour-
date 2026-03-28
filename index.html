@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Abigail Hair Glamour</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #fff0f5;
+      text-align: center;
+    }
+    h1 { color: #d63384; }
+
+    form {
+      background: white;
+      padding: 20px;
+      margin: auto;
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    input, select, button {
+      width: 90%;
+      padding: 10px;
+      margin: 5px;
+    }
+
+    button {
+      background: #d63384;
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Abigail Hair Glamour</h1>
+<p>Book your appointment</p>
+
+<form onsubmit="book(event)">
+  <input type="text" id="name" placeholder="Your Name" required><br>
+  <input type="tel" id="phone" placeholder="Phone Number" required><br>
+
+  <select id="service">
+    <option>Braiding</option>
+    <option>Wig Installation</option>
+    <option>Hair Treatment</option>
+  </select><br>
+
+  <button type="submit">Book Now</button>
+</form>
+
+<script>
+function book(e){
+  e.preventDefault();
+  alert("Appointment booked successfully!");
+}
+</script>
+
+</body>
+</html>
