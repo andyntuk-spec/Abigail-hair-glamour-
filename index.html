@@ -57,4 +57,24 @@ function book(e){
 </script>
 
 </body>
-</html>
+</hrt default AppointmentList; is still needed at the end of the code to make the AppointmentList component available for import in other files.
+
+Here's the complete code with the export statement:
+import React, { useState, useEffect } from 'react';
+import { View, Text, Button } from 'react-native';
+import { collection, getDocs, doc, updateDoc } from 'firebase/firestore';
+import { db } from './firebaseConfig'; // Import your Firebase config
+
+const AppointmentList = () => {
+  // ... (code remains the same)
+
+  return (
+    <View>
+      {appointments.map((appointment) => (
+        // ... (code remains the same)
+      ))}
+    </View>
+  );
+};
+
+export default AppointmentList;
