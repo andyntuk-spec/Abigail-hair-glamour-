@@ -78,3 +78,34 @@ const AppointmentList = () => {
 };
 
 export default AppointmentList;
+  <form onsubmit="sendToWhatsApp(event)">
+  <input type="text" id="name" placeholder="Your Name" required><br>
+  <input type="tel" id="phone" placeholder="Phone Number" required><br>
+
+  <select id="service">
+    <option>Braiding</option>
+    <option>Wig Installation</option>
+    <option>Hair Treatment</option>
+  </select><br>
+
+  <button type="submit">Book Now</button>
+</form>
+
+<script>
+function sendToWhatsApp(e){
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let service = document.getElementById("service").value;
+
+  let message = `Hello Abigail Hair Glamour,%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Service: ${service}`;
+
+  let yourNumber = "2349011336824"; // 
+
+  window.open(`https://wa.me/${yourNumber}?text=${message}`, "_blank");
+}
+</script>
